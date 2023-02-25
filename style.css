@@ -105,6 +105,7 @@ button:hover {
     background-color: #00b0f3;
     padding: 10px 40px 10px;
     color: #fff; 
+    border-radius: 5px;
 }
 
 .signup-bottom h3 {

@@ -18,7 +18,31 @@
       <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
 </head>
+
+
 <body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Main Menu</a></div>
+            <ul class="links">
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+            </ul>
+            <a href="#" class="action-button">Get started</a>
+            <div class="toggle">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown">
+            <li><a href="#">home</a></li>
+            <li><a href="#">home</a></li>
+            <li><a href="#">home</a></li>
+            <li><a href="#">home</a></li>
+            <li><a href="#" class="action-button">Get started</a></li>
+        </div>
+    </header>
     <div class="signup-wrap">
         <div class="signup-top">
             <h2 class="signup-header">Sign up</h2>
@@ -59,6 +83,16 @@
             </div>
         </div>
     </div>
+    <script>
+        const toggle =document.querySelector('.toggle')
+        const toggleic =document.querySelector('.toggle i')
+        const dropdown =document.querySelector('.dropdown')
+        toggle.onclick = function(){
+            dropdown.classList.toggle('open');
+            const isopen =dropdown.classList.contains('open');
+            
+        }
+    </script>
     <script src="js.js"></script>
 </body>
 </html>

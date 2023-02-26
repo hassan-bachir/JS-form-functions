@@ -89,6 +89,6 @@ function mergeSort(array) {
       return true;
     }
   }
-
+  
 
   

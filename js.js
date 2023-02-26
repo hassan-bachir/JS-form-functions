@@ -8,8 +8,31 @@ toggle.onclick = function(){
     const isopen =dropdown.classList.contains('open');}
     
 //json file things
-// const fs = require('fs');
-// const data = fs.readFileSync('data.json');
+const submitBtn = document.getElementById("submit-button");
+
+submitBtn.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent form submission
+  const firstName = document.getElementById("first-name").value;
+  const lastName = document.getElementById("last-name").value;
+  const email = document.getElementById("email").value;
+  const dateOfBirth = document.getElementById("b-date").value;
+  const password = document.getElementById("password").value;
+
+  const userData = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    dateOfBirth: dateOfBirth,
+    password: password,
+  };
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "data.json");
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(JSON.stringify(userData));
+});
+
+
 
 
 //mergesort Algorithm
@@ -93,34 +116,7 @@ function mergeSort(array) {
   }
 
 
-  //create course thing
-
-  class Course {
-    constructor(title, instructor, duration) {
-      this.title = title;
-      this.instructor = instructor;
-      this.duration = duration;
-    }
-  } //this is creating an error at the main sign up menu 
-    const titleInput = document.getElementById('title');
-    const instructorInput = document.getElementById('instructor');
-    const durationInput = document.getElementById('duration');
-    const submitButton = document.getElementById('submit-button');
-
-    submitButton.addEventListener('click', () => {
-        
-        const title = titleInput.value;
-        const instructor = instructorInput.value;
-        const duration = parseInt(durationInput.value);
-
-        const course = new Course(title, instructor, duration);
-        //console.log(course);
-
-        titleInput.value = '';
-        instructorInput.value = '';
-         durationInput.value = '';
-        });
-
+ 
 
 
 

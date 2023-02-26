@@ -50,9 +50,10 @@ toggle.onclick = function(){
             prompt(mergeSort(numbers));
           }
 
-          const activateMergeBtn = document.getElementById('activate-merge');
-          activateMergeBtn.addEventListener('click', promptForNumbers);
-
+          const activateMergeBtn = document.getElementsByClassName('activate-merge');
+          for(i=0;i<activateMergeBtn.length;i++){
+          activateMergeBtn[i].addEventListener('click', promptForNumbers);
+        }
 //merge sort
 
 

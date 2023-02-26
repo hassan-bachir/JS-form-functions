@@ -37,6 +37,24 @@ submitBtn.addEventListener("click", (event) => {
 
 //mergesort Algorithm
 
+function promptForNumbers() {
+  const numbers = [];
+  for (let i = 0; i < 10; i++) {
+    const number = prompt(`Enter number ${i + 1}:`);
+    if (number !== null && number.trim() !== '') {
+      numbers.push(Number(number));
+    }
+  }
+ 
+  
+  prompt(mergeSort(numbers));
+}
+
+const activateMergeBtn = document.getElementsByClassName('activate-merge');
+for(i=0;i<activateMergeBtn.length;i++){
+activateMergeBtn[i].addEventListener('click', promptForNumbers);
+}
+
 function mergeSort(array) {
     if (array.length <= 1) {
       return array;

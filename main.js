@@ -113,7 +113,7 @@ primAnchors.forEach(anchor => {
     
     const isYearPrime = isPrime(yearOfBirth);
     alert(`Your age "${age}" is ${isYearPrime ? 'is Prime!' : 'not Prime'}.`);
-    // show the result to the user using an alert box
+    
    
 });
 });
@@ -162,7 +162,7 @@ primAnchors.forEach(anchor => {
     
     const ayyy = removeConsonants(str3);
     alert(`changed "${str3}" to ${ayyy} !.`);
-    // show the result to the user using an alert box
+   
    
 });
 });
@@ -187,7 +187,22 @@ primAnchors.forEach(anchor => {
  // console.log(removeConsonants("bbanana"));
 
 
-  //reverse numbers
+  //REVERSE THE DIGITS IN AN ARRAY
+   
+ const revAnchors = document.querySelectorAll('.action-button');
+
+ revAnchors.forEach(anchor => {
+  
+  anchor.addEventListener('click', () => {
+
+    const str2 = prompt('enter a string with numbers in it:');
+    
+    const rev = reverseNumbers(str2);
+    alert(`changed "${str2}" to ${rev} !.`);
+   
+   
+});
+});
 
 
   function reverseNumbers(str) {
@@ -206,6 +221,7 @@ primAnchors.forEach(anchor => {
       }
     }
   if (num.length > 0) {
+    //the three points to write all elements in num after changing it to array
       arr.splice(arr.length - num.length, num.length, ...num.split('').reverse());
     }
    return arr.join('');

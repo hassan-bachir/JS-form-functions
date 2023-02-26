@@ -35,7 +35,7 @@ submitBtn.addEventListener("click", (event) => {
 
 
 
-//mergesort Algorithm
+//MERGE SORT ALGORITHMS
 
 function promptForNumbers() {
   const numbers = [];
@@ -92,7 +92,19 @@ function mergeSort(array) {
   }
     
     
-  //palindrome function 
+  //PALINDROME FUNCTION
+  
+ 
+const palindAnchors = document.querySelectorAll('.palind');
+palindAnchors.forEach(anchor => {
+  anchor.addEventListener('click', () => {
+    
+    const inputStr = prompt('Enter a string:');
+    const isPalind = isPalindrome(inputStr);
+
+    alert(`The string "${inputStr}" is ${isPalind ? 'a palindrome' : 'not a palindrome'}.`);
+  });
+});
 
   function isPalindrome(str){
     //base case
@@ -108,6 +120,8 @@ function mergeSort(array) {
     else {return false;}
 
   }
+
+
 
   //check prime year function
   function isPrime(yearOfBirth) {

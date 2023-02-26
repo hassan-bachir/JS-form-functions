@@ -12,9 +12,7 @@ toggle.onclick = function(){
 // const data = fs.readFileSync('data.json');
 
 
-//mergesort()
-
-let a = [5,3,8,2,4,3,6,9]
+//mergesort Algorithm
 
 function mergeSort(array) {
     if (array.length <= 1) {
@@ -52,9 +50,25 @@ function mergeSort(array) {
   }
     
     
-    console.log(mergeSort(a));
+  //palindrome function 
+
+  function isPalindrome(str){
+    //base case
+   str = str.toLowerCase();
+    if (str.length <= 1 ){
+        return true;
+    }
     
 
+    if (str[0] == str[str.length -1]){
+       return isPalindrome(str.substring(1,str.length - 1));
+    } else {return false;}
+
+  }
+
+let h = "hH";
+
+console.log (isPalindrome(h));
 
 
   

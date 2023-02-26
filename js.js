@@ -99,7 +99,7 @@ function mergeSort(array) {
       this.instructor = instructor;
       this.duration = duration;
     }
-  }
+  } //this is creating an error at the main sign up menu 
     const titleInput = document.getElementById('title');
     const instructorInput = document.getElementById('instructor');
     const durationInput = document.getElementById('duration');
@@ -112,9 +112,29 @@ function mergeSort(array) {
         const duration = parseInt(durationInput.value);
 
         const course = new Course(title, instructor, duration);
-        console.log(course);
+        //console.log(course);
 
         titleInput.value = '';
         instructorInput.value = '';
          durationInput.value = '';
         });
+
+
+ //banana to ananabay
+
+ function removeConsonants(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    const arr = str.split('');
+    let consonants = '';
+    let i = 0;
+    while (i < arr.length && !vowels.includes(arr[i])) {
+      consonants += arr[i];
+      i++;
+    }
+    if (consonants.length === 0) {
+      return str + 'ay';
+    } else {
+      return arr.slice(i).join('') + consonants + 'ay';
+    }
+  }
+  console.log(removeConsonants("bbanana"));

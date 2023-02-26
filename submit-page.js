@@ -22,6 +22,7 @@
 
         const course = new Course(title, instructor, duration);
         console.log(course);
+        alert(`course of name "${course.title}" Created, Check console for more info`);
 
         titleInput.value = '';
         instructorInput.value = '';

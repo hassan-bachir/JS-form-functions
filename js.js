@@ -38,7 +38,8 @@ function mergeSort(array) {
       if (leftArray[leftIndex] < rightArray[rightIndex]) {
         resultArray.push(leftArray[leftIndex]);
         leftIndex++;
-      } else {
+      } 
+      else {
         resultArray.push(rightArray[rightIndex]);
         rightIndex++;
       }
@@ -62,7 +63,8 @@ function mergeSort(array) {
 
     if (str[0] == str[str.length -1]){
        return isPalindrome(str.substring(1,str.length - 1));
-    } else {return false;}
+    } 
+    else {return false;}
 
   }
 
@@ -120,6 +122,9 @@ function mergeSort(array) {
         });
 
 
+
+
+
  //banana to ananabay
 
  function removeConsonants(str) {
@@ -133,8 +138,36 @@ function mergeSort(array) {
     }
     if (consonants.length === 0) {
       return str + 'ay';
-    } else {
+    }
+     else {
       return arr.slice(i).join('') + consonants + 'ay';
     }
   }
-  console.log(removeConsonants("bbanana"));
+ // console.log(removeConsonants("bbanana"));
+
+
+  //reverse numbers
+
+
+  function reverseNumbers(str) {
+
+    const arr = str.split('');
+    let num = '';
+  
+    
+    for (let i = 0; i < arr.length; i++) {
+      if (!isNaN(arr[i])) {
+        num += arr[i];
+      } 
+      else {
+        arr.splice(i - num.length, num.length, ...num.split('').reverse());
+        num = '';
+      }
+    }
+  if (num.length > 0) {
+      arr.splice(arr.length - num.length, num.length, ...num.split('').reverse());
+    }
+   return arr.join('');
+  }
+
+console.log(reverseNumbers("hf634f"));

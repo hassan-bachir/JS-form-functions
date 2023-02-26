@@ -170,4 +170,13 @@ function mergeSort(array) {
    return arr.join('');
   }
 
-console.log(reverseNumbers("hf634f"));
+//console.log(reverseNumbers("hf634f"));
+
+// get ip 
+
+async function getIPAddress() {
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    return data.ip;
+  }
+  console.log(getIPAddress());

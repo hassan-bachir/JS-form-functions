@@ -117,6 +117,8 @@ primAnchors.forEach(anchor => {
    
 });
 });
+
+
   let age = 0;
   function isPrime(yearOfBirth) {
     const currentYear = new Date().getFullYear();
@@ -147,7 +149,24 @@ primAnchors.forEach(anchor => {
 
 
 
- //banana to ananabay
+ //BANANA AYY
+
+  
+ const ayyAnchors = document.querySelectorAll('.ayy');
+
+ ayyAnchors.forEach(anchor => {
+  
+  anchor.addEventListener('click', () => {
+
+    const str3 = prompt('enter a string:');
+    
+    const ayyy = removeConsonants(str3);
+    alert(`changed "${str3}" to ${ayyy} !.`);
+    // show the result to the user using an alert box
+   
+});
+});
+
 
  function removeConsonants(str) {
     const vowels = ['a', 'e', 'i', 'o', 'u'];

@@ -179,4 +179,24 @@ async function getIPAddress() {
     const data = await response.json();
     return data.ip;
   }
-  console.log(getIPAddress());
+
+
+  async function evenIp() {
+    const ipAddress = await getIPAddress();
+    const digits = ipAddress.match(/\d/g);
+    let sum = 0;
+    for (i=0;i<digits.length;i++) {
+      if (digits[i] % 2 === 0) {
+        sum += Number(digits[i]);
+      }
+    }
+    return sum;
+  }
+  
+
+  async function myFunction() {
+    const sum = await evenIp();
+    console.log(sum); 
+   
+  }
+//   myFunction();

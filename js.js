@@ -66,9 +66,29 @@ function mergeSort(array) {
 
   }
 
-let h = "hH";
-
-console.log (isPalindrome(h));
+  //check prime year function
+  function isPrime(yearOfBirth) {
+    const currentYear = new Date().getFullYear();
+    const age = currentYear - yearOfBirth;
+  
+    if (age <= 1) {
+        return false;
+    } 
+    else if (age == 2)
+     {
+      return true;
+    } 
+    else {
+    
+      for (let i = 2; i < age; i++) {
+        if (age % i == 0)
+         {
+          return false;
+        }
+      }
+      return true;
+    }
+  }
 
 
   

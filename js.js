@@ -7,3 +7,6 @@ toggle.onclick = function(){
     dropdown.classList.toggle('open');
     const isopen =dropdown.classList.contains('open');}
     
+//json file things
+const fs = require('fs');
+const data = fs.readFileSync('data.json');

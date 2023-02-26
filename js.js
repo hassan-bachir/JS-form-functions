@@ -200,3 +200,22 @@ async function getIPAddress() {
    
   }
 //   myFunction();
+
+
+//location function
+
+//need to create an h3 to handle this function
+function getCurrentLocation() {
+    const locationElement = document.getElementById('h3');
+    
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        
+        locationElement.textContent = `Your current location is: ${latitude}, ${longitude}`;
+      });
+    } else {
+      locationElement.textContent = "Geolocation is not supported by this browser.";
+    }
+  }

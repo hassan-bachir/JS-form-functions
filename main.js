@@ -99,9 +99,28 @@ palindAnchors.forEach(anchor => {
 
 
   //PRIME OR NO 
+
+
+  
+const primAnchors = document.querySelectorAll('.prim');
+
+
+primAnchors.forEach(anchor => {
+  
+  anchor.addEventListener('click', () => {
+
+    const yearOfBirth = prompt('Enter your year of birth:');
+    
+    const isYearPrime = isPrime(yearOfBirth);
+    alert(`Your age "${age}" is ${isYearPrime ? 'is Prime!' : 'not Prime'}.`);
+    // show the result to the user using an alert box
+   
+});
+});
+  let age = 0;
   function isPrime(yearOfBirth) {
     const currentYear = new Date().getFullYear();
-    const age = currentYear - yearOfBirth;
+   age = currentYear - yearOfBirth;
   
     if (age <= 1) {
         return false;

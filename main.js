@@ -123,7 +123,7 @@ palindAnchors.forEach(anchor => {
 
 
 
-  //check prime year function
+  //PRIME OR NO 
   function isPrime(yearOfBirth) {
     const currentYear = new Date().getFullYear();
     const age = currentYear - yearOfBirth;

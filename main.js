@@ -276,3 +276,18 @@ function getCurrentLocation() {
       locationElement.textContent = "Geolocation is not supported by this browser.";
     }
   }
+  const loci = document.getElementById('location');
+  loci.innerHTML =getCurrentLocation();
+
+
+  const section2 = document.querySelector('.section2');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      alert('You have scrolled to section 2!');
+    }
+  });
+});
+
+observer.observe(section2);

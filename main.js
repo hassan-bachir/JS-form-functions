@@ -263,7 +263,7 @@ async function getIPAddress() {
 
 //need to create an h3 to handle this function
 function getCurrentLocation() {
-    const locationElement = document.getElementById('h3');
+    const locationElement = document.getElementById('location');
     
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -276,10 +276,12 @@ function getCurrentLocation() {
       locationElement.textContent = "Geolocation is not supported by this browser.";
     }
   }
-  const loci = document.getElementById('location');
-  loci.innerHTML =getCurrentLocation();
+  getCurrentLocation();
+ 
 
 
+
+//ALERT ON SECTION 2
   const section2 = document.querySelector('.section2');
 
 const observer = new IntersectionObserver(entries => {

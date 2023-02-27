@@ -243,6 +243,23 @@ header a:hover {
     justify-content: center;
 }
 
+
+.section2 {
+    height: 650px;
+    width: 100%;
+    background-image: url('assets/world.svg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#location {
+    color: white;
+    font-size: 3rem;
+    margin-top: -290px;
+}
+
 /* queries */
 @media (max-width:990px) {
     .navbar .links,
@@ -276,7 +293,3 @@ header a:hover {
     }
 }
 
-
-.section2 {
-    height: 500px;
-}

@@ -229,39 +229,41 @@ primAnchors.forEach(anchor => {
 
 //console.log(reverseNumbers("hf634f"));
 
-// get ip 
+// GET IP
+
 
 async function getIPAddress() {
-    const response = await fetch('https://api.ipify.org?format=json');
-    const data = await response.json();
-    return data.ip;
-  }
-
-
-  async function evenIp() {
-    const ipAddress = await getIPAddress();
-    const digits = ipAddress.match(/\d/g);
-    let sum = 0;
-    for (i=0;i<digits.length;i++) {
-      if (digits[i] % 2 === 0) {
-        sum += Number(digits[i]);
-      }
-    }
-    return sum;
-  }
+  const response = await fetch('https://api.ipify.org?format=json');
+  const data = await response.json();
   
+  return data.ip;
+  
+}
 
-  async function myFunction() {
-    const sum = await evenIp();
-    console.log(sum); 
-   
+
+
+async function evenIp() {
+  const ipAddress = await getIPAddress();
+  const digits = ipAddress.match(/\d/g);
+  let sum = 0;
+  for (i=0;i<digits.length;i++) {
+    if (digits[i] % 2 === 0) {
+      sum += Number(digits[i]);
+    }
   }
-//   myFunction();
+  return sum;
+}
 
 
-//location function
+async function myFunction() {
+  const sum = await evenIp();
+  alert (sum)
+ }
 
-//need to create an h3 to handle this function
+
+//LOCATION FUNCTION
+
+
 function getCurrentLocation() {
     const locationElement = document.getElementById('location');
     
@@ -282,6 +284,7 @@ function getCurrentLocation() {
 
 
 //ALERT ON SECTION 2
+
   const section2 = document.querySelector('.section2');
 
 const observer = new IntersectionObserver(entries => {

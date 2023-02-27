@@ -250,8 +250,10 @@ header a:hover {
     background-image: url('assets/world.svg');
     background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
     
 }
 #location {
